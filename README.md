@@ -4,12 +4,12 @@ A fast-paced single-player word game built with React + TypeScript where players
 
 This project is designed as a polished front-end product demo: real-time gameplay logic, audio feedback, difficulty scaling, and strong UX transitions from menu to countdown to game over.
 
-## Why This Project Is Recruiter-Relevant
+## Learnt Skills:
 
-- Demonstrates interactive stateful UI engineering (multiple game states, timers, transitions, and validation flow).
-- Uses clean TypeScript modeling for status management and typed gameplay logic.
-- Implements non-trivial browser APIs (Web Audio API, localStorage) without external dependencies.
-- Shows product thinking: onboarding flow, countdown sequencing, clear feedback loops, and replayability.
+- Interactive stateful UI engineering (multiple game states, timers, transitions, and validation flow).
+- Clean TypeScript modeling for status management and typed gameplay logic.
+- Using browser APIs (Web Audio API, localStorage) without external dependencies.
+- Developed my product thinking: onboarding flow, countdown sequencing, clear feedback loops, and replayability.
 
 ## Core Features
 
