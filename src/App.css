@@ -190,6 +190,13 @@ button:disabled {
   cursor: text;
 }
 
+.signature  {
+  font-size: 12px;
+  color:#3f3f3f;
+  margin-top: 6px;
+  text-align: center;
+}
+
 .score-number {
   display: inline-block;
   font-size: clamp(2.1rem, 5vw, 3.1rem);

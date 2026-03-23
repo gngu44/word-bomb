@@ -598,6 +598,9 @@ export default function App() {
       )}
 
       {(status === "loading" || status === "ready") && SHOW_LEADERBOARD && leaderboardPanel}
+      <div className="signature">
+          by gngu44
+      </div>
     </div>
   );
 }
