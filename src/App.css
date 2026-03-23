@@ -1,0 +1,288 @@
+:root {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+h1,
+h2,
+p,
+div,
+span,
+button,
+input {
+  color: #ffffff;
+}
+
+button {
+  border: 1px solid #5f5f5f;
+  background: #3a3a3a;
+  border-radius: 8px;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed !important;
+}
+
+.start-panel {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.menu-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.start-button {
+  background: #2dc25a;
+  border-color: #2dc25a;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.65rem 1.7rem;
+}
+
+.start-button:hover {
+  background: #32d864;
+  border-color: #32d864;
+}
+
+.menu-secondary-button {
+  background: #3f3f3f;
+  border-color: #676767;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.65rem 1.3rem;
+}
+
+.menu-secondary-button:hover {
+  background: #4a4a4a;
+  border-color: #767676;
+}
+
+.howto-panel {
+  margin: 12px auto 0;
+  width: min(640px, 100%);
+  border: 1px solid #666;
+  border-radius: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.countdown-stage {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.countdown-text {
+  font-size: clamp(2.3rem, 8vw, 4.4rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  animation: countdown-fade 650ms ease-in-out forwards;
+}
+
+.gameover-page {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.gameover-title {
+  margin: 0;
+  font-size: clamp(2.8rem, 10vw, 5rem);
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.gameover-score {
+  margin: 0 0 8px 0;
+  font-size: clamp(1.1rem, 3.4vw, 1.6rem);
+}
+
+@keyframes countdown-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.84);
+  }
+  22% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  72% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
+.paragraph {
+  text-align: left;
+  text-indent: 30px 
+}
+
+.timer-track {
+  width: min(420px, 92%);
+  height: 14px;
+  margin: 0 auto;
+  background: #454545;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #666;
+}
+
+.timer-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2dc25a, #b9cf37, #d86a38);
+  transition: width 100ms linear;
+}
+
+.word-input-disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.word-input-stage {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  position: relative;
+  cursor: text;
+}
+
+.score-number {
+  display: inline-block;
+  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score-number-shake {
+  animation: score-shake 300ms ease;
+}
+
+@keyframes score-shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.word-input-visual {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  flex-wrap: wrap;
+}
+
+.word-input-visual-center {
+  justify-content: center;
+}
+
+.word-cell {
+  width: 30px;
+  height: 34px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: lowercase;
+  border: 1px solid transparent;
+}
+
+.word-cell-bounce {
+  animation: cell-bounce 260ms ease;
+}
+
+@keyframes cell-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.word-cell-plain {
+  background: #4a4a4a;
+}
+
+.word-cell-chunk {
+  background: #a62323;
+}
+
+.word-cell-match {
+  background: #2dc25a;
+}
+
+.word-input-native {
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border: none;
+}
