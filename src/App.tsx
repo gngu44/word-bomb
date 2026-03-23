@@ -135,7 +135,7 @@ export default function App() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch("/words.txt");
+        const res = await fetch(`${import.meta.env.BASE_URL}words.txt`);
         const text = await res.text();
         const words = text
           .split(/\r?\n/)
