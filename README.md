@@ -4,6 +4,8 @@ A fast-paced single-player word game built with React + TypeScript where players
 
 This project is designed as a polished front-end product demo: real-time gameplay logic, audio feedback, difficulty scaling, and strong UX transitions from menu to countdown to game over.
 
+[Game link](http://gngu44.github.io/word-bomb/)
+
 ## Learnt Skills:
 
 - Interactive stateful UI engineering (multiple game states, timers, transitions, and validation flow).
